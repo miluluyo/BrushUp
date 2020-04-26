@@ -2,32 +2,32 @@
 
 **目录**
 
- [1. Doctype作用？标准模式与兼容模式（怪异模式）各有什么区别?](#1)
- [2. 行内元素有哪些？块级元素有哪些？可变元素有哪些？空(void)元素有哪些？](#2)
- [3. 页面导入样式时，使用link和@import有什么区别？](#3)
- [4. 介绍一下你对浏览器内核的理解](#4)
- [5. Html 5 有哪些新特性](#5)
- [6. SVG 与 Canvas 两者间的区别](#6)
- [7. 如何处理HTML5新标签的浏览器兼容问题？](#7)
- [8. webSocket如何兼容低浏览器？(阿里)](#8)
- [9. 简述一下你对HTML语义化的理解？](#9)
- [10. HTML5的离线储存怎么使用，工作原理能不能解释一下？](#10)
- [11. 浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢？](#11)
- [12. 请描述一下 cookies，sessionStorage 和 localStorage 的区别？](#12)
- [13. 如何实现浏览器内多个标签页之间的通信? (阿里)](#13)
- [14. 三次握手和四次挥手](#14)
- [15. iframe有那些缺点？](#15)
- [16. Label的作用是什么？是怎么用的？](#16)
- [17. HTML5的form如何关闭自动完成功能？](#17)
- [18. 页面可见性（Page Visibility API） 可以有哪些用途？](#18)
- [19. 如何在页面上实现一个圆形的可点击区域？](#19)
- [20. 实现不使用 border ](#20)
- [21. 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。](#21)
- [22. 网页验证码是干嘛的，是为了解决什么安全问题？](#1)
+ [1. Doctype作用？标准模式与兼容模式（怪异模式）各有什么区别?](#1)<br />
+ [2. 行内元素有哪些？块级元素有哪些？可变元素有哪些？空(void)元素有哪些？](#2)<br />
+ [3. 页面导入样式时，使用link和@import有什么区别？](#3)<br />
+ [4. 介绍一下你对浏览器内核的理解](#4)<br />
+ [5. Html 5 有哪些新特性](#5)<br />
+ [6. SVG 与 Canvas 两者间的区别](#6)<br />
+ [7. 如何处理HTML5新标签的浏览器兼容问题？](#7)<br />
+ [8. webSocket如何兼容低浏览器？(阿里)](#8)<br />
+ [9. 简述一下你对HTML语义化的理解？](#9)<br />
+ [10. HTML5的离线储存怎么使用，工作原理能不能解释一下？](#10)<br />
+ [11. 浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢？](#11)<br />
+ [12. 请描述一下 cookies，sessionStorage 和 localStorage 的区别？](#12)<br />
+ [13. 如何实现浏览器内多个标签页之间的通信? (阿里)](#13)<br />
+ [14. 三次握手和四次挥手](#14)<br />
+ [15. iframe有那些缺点？](#15)<br />
+ [16. Label的作用是什么？是怎么用的？](#16)<br />
+ [17. HTML5的form如何关闭自动完成功能？](#17)<br />
+ [18. 页面可见性（Page Visibility API） 可以有哪些用途？](#18)<br />
+ [19. 如何在页面上实现一个圆形的可点击区域？](#19)<br />
+ [20. 实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。](#20)<br />
+ [21. 网页验证码是干嘛的，是为了解决什么安全问题？](#21)
 
 <a name="UtrF4"></a>
 <div id="1"></div>
-### 1、Doctype作用？标准模式与兼容模式（怪异模式）各有什么区别?
+### 1、Doctype作用？标准模式与兼容模式（怪异模式）各有什么区别?###
+
 `<!DOCTYPE>`的定义和用法<br />`<!DOCTYPE>`必须在 HTML 的第一行，位于 `<html>` 标签前，`<!DOCTYPE>`不是 HTML 标签，它是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。（HTML 4.01基于SGML，声明需引用 DTD ,HTML 4.01规定了三种不同声明，HTML5 中之规定了一种，HTML5 不是基于SGML，因此不作要求引入DTD，但需要`<!DOCTYPE>`来规范浏览器的行为）<br />（1）`<!DOCTYPE>`告知浏览器的解析器是用什么文档类型（HTML规范、XHTML规范）去解析。<br />`<!DOCTYPE>`不存在或格式不正确会导致文档以兼容模式呈现。
 
 （2）标准模式的排版 和 JS运作模式 都是以浏览器支持的最高标准运行。<br />在兼容模式中，页面以宽松的向后兼容的方式显示，模拟老式浏览器的行为以防止站点无法工作。<br />Standards — 标准模式，用于呈现遵循最新标准的网页<br />Quirks — 兼容模式，用于呈现为传统浏览器而设计的网页
@@ -40,12 +40,12 @@
 
 <a name="8fCAh"></a>
 <div id="2"></div>
-### 2、行内元素有哪些？块级元素有哪些？可变元素有哪些？空(void)元素有哪些？
+### 2、行内元素有哪些？块级元素有哪些？可变元素有哪些？空(void)元素有哪些？### 
 Q：行内元素<br />A：a、abbr、b、span、img、input、select、strong、<br />Q：行内元素<br />A：div、ul、ol、li、dl、dt、dd、h1-h6、p、hr、table、<br />Q：可变元素（根据上下文语境决定该元素为块元素或者内联元素）<br />A：button、del、iframe、ins、map、object、script<br />Q：空元素（在 HTML 元素中，没有内容的 HTML 元素被称为空元素）<br />A：br、hr、img、link、meta、<br />area（定义图像映射【图像映射：带有可点击区域的图像】内部的区域）、<br />base（为页面上的所有链接规定默认地址或默认目标）<br />col（规定了 `<colgroup>` 元素内部的每一列的列属性，可以向整个列应用样式，而不需要重复为每个单元格或每一行设置样式。但是，H5中不再支持HTML 4.01中大部分属性！）<br />command（它可以定义命令按钮，比如单选按钮、复选框或按钮。只有IE9支持！！只有IE9支持！！只有IE9支持！！）<br />embed（定义了一个容器，用来嵌入外部应用或者互动程序（插件）。）<br />keygen（规定用于表单的密钥对生成器字段，当提交表单时，私钥存储在本地，公钥发送到服务器）<br />param（允许为插入 XHTML 文档的对象规定 run-time 设置）<br />source（媒介元素定义媒介资源，允许您规定可替换的视频/音频文件供浏览器根据它对媒体类型或者编解码器的支持进行选择。）<br />track（为诸如 video 元素之类的媒介规定外部文本轨道。用于规定字幕文件或其他包含文本的文件，当媒介播放时，这些文件是可见的）<br />wbr（规定在文本中的何处适合添加换行符）<br />
 
 <a name="jwN7B"></a>
 <div id="3"></div>
-### 3、页面导入样式时，使用link和@import有什么区别？
+### 3、页面导入样式时，使用link和@import有什么区别？### 
 link语法结构：<br />
 
 ```html
@@ -70,7 +70,7 @@ link语法结构：<br />
 
 <a name="0MXjM"></a>
 <div id="4"></div>
-### 4、介绍一下你对浏览器内核的理解
+### 4、介绍一下你对浏览器内核的理解### 
 渲染引擎 和 JS 引擎<br />
 渲染引擎：负责取得网页的内容（html、xml 和图像等），整理讯息（例如加入css），以及计算网页的显示方式，然后输出到显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不同。所有网页浏览器、电子邮箱客户端以及其它需要编辑、显示网络内容的应用程序都需要内核<br />
 JS 引擎：解析和执行 javascript 来实现网页的动态效果<br />
@@ -79,7 +79,7 @@ JS 引擎：解析和执行 javascript 来实现网页的动态效果<br />
 
 <a name="1EPEQ"></a>
 <div id="5"></div>
-### 5、Html 5 有哪些新特性
+### 5、Html 5 有哪些新特性### 
 附件[https://www.cnblogs.com/vicky1018/p/7705223.html](https://www.cnblogs.com/vicky1018/p/7705223.html)<br />1、语义化标签<br />
 
 
@@ -123,7 +123,7 @@ video 支持多个 source 元素，元素可以链接不同的视频文件，<br
 
 <a name="Q3Skm"></a>
 <div id="6"></div>
-#### 6、SVG 与 Canvas 两者间的区别
+#### 6、SVG 与 Canvas 两者间的区别### 
 SVG 是一种使用 XML 描述 2D 图形的语言<br />Canvas 通过 JavaScript 来绘制 2D 图形<br />SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的，可以为某个元素附加 JavaScript 事件处理器<br />在 SVG 中，每个被绘制的图形均被视为对象，如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形<br />Canvas 是逐渐像素进行渲染的。在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象<br />
 <br />6、地理定位<br />HTML 5 Geolocation（地理定位）用于定位用户的位置<br />
 <br />7、拖放API<br />
@@ -133,7 +133,7 @@ SVG 是一种使用 XML 描述 2D 图形的语言<br />Canvas 通过 JavaScript 
 
 <a name="DEj7O"></a>
 <div id="7"></div>
-### 7、如何处理HTML5新标签的浏览器兼容问题？
+### 7、如何处理HTML5新标签的浏览器兼容问题？### 
 一、<br />1.使用静态资源的 html5shiv 包<br />
 
 ```html
@@ -151,18 +151,18 @@ header, section, footer, aside, nav, main, article, figure { display: block; }
 
 <a name="UB019"></a>
 <div id="8"></div>
-### 8、webSocket如何兼容低浏览器？(阿里)
+### 8、webSocket如何兼容低浏览器？(阿里)### 
 Adobe Flash Socket 、 ActiveX HTMLFile (IE) 、 基于 multipart 编码发送 XHR 、 基于长轮询的 XHR<br />
 
 <a name="DdgTf"></a>
 <div id="9"></div>
-### 9、简述一下你对HTML语义化的理解？
+### 9、简述一下你对HTML语义化的理解？### 
 使用合理、正确的标签来展示内容，指对文本内容的结构化（内容语义化），选择合乎语义的标签（代码语义化），便于开发者阅读，维护和写出更优雅的代码的同时，让浏览器的爬虫和辅助技能更好的解析<br />
 <br />语义化的优点<br />易于阅读；样式丢失的时候能让页面呈现清晰结构<br />有利于SEO；<br />语义化更具可读性；<br />代码更好维护；<br />
 
 <a name="qNj30"></a>
 <div id="10"></div>
-### 10、HTML5的离线储存怎么使用，工作原理能不能解释一下？
+### 10、HTML5的离线储存怎么使用，工作原理能不能解释一下？### 
 在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件。<br />**原理**：HTML5的离线存储是基于一个新建的 .appcache 文件的缓存机制（不是存储技术），通过这个文件上的解析清单离线存储资源，这些资源就会像 cookie 一样被存储下来，之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。<br />**更新缓存**：一旦应用被缓存，它就会保持缓存知道发生下列情况：1、用户清空浏览器缓存 2、manifest 文件被修改 3、由程序来更新应用缓存<br />**如何使用**：1、页面头部下面加入一个 manifest 的属性<br />
 
 ```html
@@ -193,17 +193,17 @@ FALLBACK:
 
 <a name="5ooNF"></a>
 <div id="11"></div>
-### 11、浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢？
+### 11、浏览器是怎么对 HTML5 的离线储存资源进行管理和加载的呢？### 
 在线的情况下，浏览器发现 html 头部有mainfest 属性，它会去请求 mainfest 文件，如果是第一次访问app，那么浏览器就会根据 mainfest 文件的内容下载相应的资源并且进行离线存储，如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的 mainfest 文件与旧的mainfest 文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，就会重新下载文件中的资源并进行离线存储。<br />离线的情况下，浏览器就直接使用离线存储的资源<br />
 
 <a name="iIw1c"></a>
 <div id="12"></div>
-### 12、请描述一下 cookies，sessionStorage 和 localStorage 的区别？
+### 12、请描述一下 cookies，sessionStorage 和 localStorage 的区别？### 
 共同点：都是保存在浏览器端，且同源的<br />区别：<br />1、存储大小<br />cookie 数据的大小不能超过 4k<br />sessionStorage 和 localStorage 虽然也有存储大小的限制，但比 cookie 大得多，可以达到 5M 或更大<br />2、有效时间<br />cookie 设置的 cookie 过期时间之前一直有效，及时窗口或浏览器关闭<br />sessionStorage 数据在当前浏览器窗口关闭后自动删除<br />localStorage 存储持久数据，浏览器关闭后数据不丢失，除非主动删除数据<br />3、数据域服务器之间的交互方式<br />cookie 的数据会自动的传递到服务器，服务器端也可以写 cookie 到客户端（每请求一个新的页面时，cookie都会被发送过去，无形中造成宽带浪费）<br />sessionStorage 和 localStorage 不会自动把数据发给服务器，仅在本地保存<br />4、作用域<br />sessionStorage 不在不同的浏览器窗口共享，即使是同一个页面<br />localStorage 和 cookies 是在所有同源窗口中共享的<br />5、适用情况<br />cookies 数据始终在同源的 http 请求中携带（即使不需要），适合保存很小的数据<br />sessuibStorage 和 localStorage 不会自动的将数据发送给服务器，仅在本地存储<br />
 
 <a name="mdPD8"></a>
 <div id="13"></div>
-### 13、如何实现浏览器内多个标签页之间的通信? (阿里)
+### 13、如何实现浏览器内多个标签页之间的通信? (阿里)### 
 **方法一：使用 localStorage**<br />localstorage 是浏览器多个标签共用的存储空间，所以可以用来实现多标签之间的通信（session 是会话级的存储空间，每个标签页都是单独的）<br />使用 localStorage.setItem(key,value) 添加内容<br />使用 storage 事件监听添加、修改、删除的动作<br />
 
 ```javascript
@@ -256,18 +256,18 @@ window.worker.port.postMessage('发送信息给worker')
 
 <a name="ziN0q"></a>
 <div id="14"></div>
-### 14、三次握手和四次挥手
+### 14、三次握手和四次挥手### 
 附件 [https://blog.csdn.net/qzcsu/article/details/72861891](https://blog.csdn.net/qzcsu/article/details/72861891)<br />  [https://blog.csdn.net/ityouknow/article/details/86710128](https://blog.csdn.net/ityouknow/article/details/86710128)<br />
 <br />三握：<br />客户端 - 发送带有 SYN 标志的数据包 - 一次握手 - 服务端<br />服务端 - 发送带有 SYN/ACK 标志的数据包 - 二次握手 - 客户端<br />客户端 - 发送带有 ACK 标志的数据包 - 三次握手 - 服务端<br />
 <br />![](https://cdn.nlark.com/yuque/0/2020/gif/709817/1578906279918-f0c1ed90-ac69-43fd-91d5-a6f0365a9aa0.gif#align=left&display=inline&height=768&margin=%5Bobject%20Object%5D&originHeight=768&originWidth=1364&size=0&status=done&style=none&width=1364)<br />四挥：<br />客户端 - 发送一个 FIN ，用来关闭客户端到服务器的数据传送<br />服务器 - 收到这个 FIN，它发回一个 ACK，确认序号为收到的序号加一，和 YSN 一样，一个 FIN 将占用一个序号<br />服务器 - 关闭与客户端的连接，发送一个 FIN 给客户端<br />客户端 - 发回 ACK 报文确认，并将确认序号设置为收到序号加一<br />![](https://cdn.nlark.com/yuque/0/2020/gif/709817/1578906314660-e528b3f4-d920-4a49-89d5-bfaba98ec1ad.gif#align=left&display=inline&height=384&margin=%5Bobject%20Object%5D&originHeight=384&originWidth=682&size=0&status=done&style=none&width=682)
 <a name="Rjzxv"></a>
 <div id="15"></div>
-### 15、iframe有那些缺点？
+### 15、iframe有那些缺点？### 
 1、阻塞主页面的 onload 事件<br />2、iframe 和主页面共享链接池，而浏览器对相同域的链接有限制，会影响页面的并行加载<br />（PS：最好通过 js 动态给 iframe 添加 src 属性值，这样可以绕开上面两个问题）<br />3、搜索引擎的检索程序无法解读这种页面，不利于 SEO；<br />
 
 <a name="m453K"></a>
 <div id="16"></div>
-### 16、Label的作用是什么？是怎么用的？
+### 16、Label的作用是什么？是怎么用的？### 
 label 标签是用来定义表单控制间的关系，当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上<br />
 
 ```html
@@ -281,18 +281,18 @@ label 标签是用来定义表单控制间的关系，当用户选择该标签�
 
 <a name="xrnUC"></a>
 <div id="17"></div>
-### 17、HTML5的form如何关闭自动完成功能？
+### 17、HTML5的form如何关闭自动完成功能？### 
 自动完成：autocomplete 属性规定表单是否应该启用自动完成功能，它自动完成允许浏览器预测对之前键入过的值<br />如何关闭：<br />1、在 IE 的 Internet 选项菜单里的内容 -- 自动完成里面设置<br />2、设置 Form 的 autocomplete 为 "on" 或者 "off" 来开启或者关闭自动完成功能<br />3、设置输入框的 autocomplete 为 "on" 或者 "off" 来开启或者关闭该输入框的自动完成功能<br />
 
 <a name="XfpB9"></a>
 <div id="18"></div>
-### 18、页面可见性（Page Visibility API） 可以有哪些用途？
+### 18、页面可见性（Page Visibility API） 可以有哪些用途？### 
 页面可见性：我们能看到的页面<br />用途：<br />网站轮播、只有在观看时，展示下一显示信息<br />仪表盘不希望在页面不可见时轮询服务器进行更新<br />页面想要检测是否正在渲染，以便可以准确的计算网页浏览量<br />当用户进入页面播放，离开页面暂停<br />登陆同步<br />计算在线时长<br />在线聊天离开状态<br />
 <br />使用：<br />document.hidden 根据浏览器窗口的状态返回布尔值 true 或 false<br />document.visibilityState 存储具体的状态字符串，四种状态：<br />visible：页面内容至少是部分可见，非最小化窗口的前景选择器<br />hidden：页面内容对用户不可见，可以是一个后台标签，或是最小化窗口的一部分，或是在操作系统锁屏激活的状态下<br />prerender：页面内容正在被预渲染且没有对用户是不可见的<br />unloaded：页面正在从内存中卸载<br />
 
 <a name="TJGHi"></a>
 <div id="19"></div>
-### 19、如何在页面上实现一个圆形的可点击区域？
+### 19、如何在页面上实现一个圆形的可点击区域？### 
 1、mep + area<br />
 
 ```html
@@ -320,7 +320,7 @@ var x1=100,y1=100,x2= e.clientX;y2= e.clientY;
 
 <a name="6zxDE"></a>
 <div id="20"></div>
-### 20、实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。
+### 20、实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。### 
 
 
 ```html
@@ -330,7 +330,7 @@ var x1=100,y1=100,x2= e.clientX;y2= e.clientY;
 
 <a name="41kb0"></a>
 <div id="21"></div>
-### 21、网页验证码是干嘛的，是为了解决什么安全问题？
+### 21、网页验证码是干嘛的，是为了解决什么安全问题？### 
 用于人机识别，区分人的操作行为和机器行为。<br />可以防止恶意破解密码，刷票，论坛灌水<br />有效防止黑客对某人特定注册用户用特定程序暴力破解方式进行不断的登录尝试<br />
 <br />
 
