@@ -28,7 +28,8 @@
 	height:200px;
 	border:2px solid black;
 	padding:50px;
-	margin:50px;}
+	margin:50px;
+}
 ```
  <br />标准模式：盒子总宽度/高度 = 内容区宽度 /高度+padding+border + margin。效果：<br />![](https://cdn.nlark.com/yuque/0/2020/png/709817/1587801920959-13e6df83-3ce5-4e53-a0df-594b35e83128.png#align=left&display=inline&height=170&margin=%5Bobject%20Object%5D&originHeight=170&originWidth=205&size=0&status=done&style=none&width=205)<br />
 <br />怪异模式：盒子总宽度/高度 = width/height + margin。效果：<br />![](https://cdn.nlark.com/yuque/0/2020/png/709817/1587801921020-8f730655-8bb0-41cc-afc0-803ff062ccaa.png#align=left&display=inline&height=174&margin=%5Bobject%20Object%5D&originHeight=174&originWidth=202&size=0&status=done&style=none&width=202)<br />
@@ -40,7 +41,9 @@
 ### 2、什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？
 
 响应式设计集百中创建页面的图片排版大小，可以度智能地根据用户行为以及使用的设备问环境（系统答平台、屏幕尺寸、屏幕定向等）进行相对应的布局。<br />
-<br />**基本原理：**通过媒体查询检测不同的设备屏幕尺寸做处理。页面头部必须有meta声明viewport：<br /> `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no”>`<br />
+
+**基本原理：**
+通过媒体查询检测不同的设备屏幕尺寸做处理。页面头部必须有meta声明viewport：<br /> `<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no”>`<br />
 <br />兼容 IE 需要 JS 进行辅助 <br />
 
 <a name="HMkIq"></a>
